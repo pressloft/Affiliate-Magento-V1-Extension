@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <PressLoft_Affiliate>
+            <active>true</active>
+            <codePool>local</codePool>
+        </PressLoft_Affiliate>
+    </modules>
+</config>

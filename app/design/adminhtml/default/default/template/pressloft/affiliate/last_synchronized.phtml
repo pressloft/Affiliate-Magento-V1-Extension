@@ -1,0 +1,7 @@
+<?php /** @var PressLoft_Affiliate_Block_Adminhtml_LastSynchronized $this */ ?>
+<?php $time = $this->getLastSynchronizedTime(); ?>
+
+<div class="info-block last-synchronized">
+    <h2><span><?= $this->escapeHtml(__('Last Heartbeat')) ?></span></h2>
+    <p><span class="text-success"><?= $this->escapeHtml(__('Date and time: ' . $time))?></span></p>
+</div>

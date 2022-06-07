@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <pressloft_affiliate translate="title" module="pressloft_affiliate">
+                    <sort_order>550</sort_order>
+                    <title>Affiliate Logs</title>
+                    <action>adminhtml/affiliateLogs/</action>
+                </pressloft_affiliate>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <sales>
+                        <children>
+                            <pressloft_affiliate translate="title" module="pressloft_affiliate">
+                                <title>Affiliate Logs</title>
+                            </pressloft_affiliate>
+                        </children>
+                    </sales>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <pressloft_affiliate>
+                                        <title>PressLoft</title>
+                                    </pressloft_affiliate>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <layout>
+        <updates>
+            <amfeed>
+                <file>pressloft/affiliate/affiliatelogs.xml</file>
+            </amfeed>
+        </updates>
+    </layout>
+    <translate>
+        <modules>
+            <PressLoft_Affiliate>
+                <files>
+                    <default>PressLoft_Affiliate.csv</default>
+                </files>
+            </PressLoft_Affiliate>
+        </modules>
+    </translate>
+</config>

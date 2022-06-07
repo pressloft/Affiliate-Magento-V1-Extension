@@ -1,0 +1,31 @@
+<?php /* @var $this PressLoft_Affiliate_Block_Affiliate */ ?>
+
+<script>
+    jQuery(function($){
+        $(document).ready(function(){
+            let setAffiliateCookieUrl = "<?= $this->getExpiresCookieUrl() ?>";
+            "use strict";
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams) {
+                const tokenName ='<?= $this->getTokenName() ?>';
+                const tokenValue = urlParams.get(tokenName);
+                if (tokenValue) {
+                    $.ajax({
+                        url: setAffiliateCookieUrl,
+                        dataType: 'json',
+                        type: 'post',
+                        data: {
+                            pltoken: tokenValue
+                        },
+                        success: function(res) {
+                            console.log(res.message);
+                        },
+                        error: function (res) {
+                            console.log(res);
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
