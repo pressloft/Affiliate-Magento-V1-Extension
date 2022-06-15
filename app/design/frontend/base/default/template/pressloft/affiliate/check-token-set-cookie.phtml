@@ -1,31 +1,33 @@
 <?php /* @var $this PressLoft_Affiliate_Block_Affiliate */ ?>
 
 <script>
-    jQuery(function($){
-        $(document).ready(function(){
-            let setAffiliateCookieUrl = "<?= $this->getExpiresCookieUrl() ?>";
-            "use strict";
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams) {
-                const tokenName ='<?= $this->getTokenName() ?>';
-                const tokenValue = urlParams.get(tokenName);
-                if (tokenValue) {
-                    $.ajax({
-                        url: setAffiliateCookieUrl,
-                        dataType: 'json',
-                        type: 'post',
-                        data: {
-                            pltoken: tokenValue
-                        },
-                        success: function(res) {
-                            console.log(res.message);
-                        },
-                        error: function (res) {
-                            console.log(res);
+    document.observe("dom:loaded", function() {
+
+        let setAffiliateCookieUrl = "<?= $this->getExpiresCookieUrl() ?>";
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams) {
+            const tokenName ='<?= $this->getTokenName() ?>';
+            const tokenValue = urlParams.get(tokenName);
+            if (tokenValue) {
+                new Ajax.Request(setAffiliateCookieUrl, {
+                    evalScripts: true,
+                    parameters: {
+                        pltoken: tokenValue
+                    },
+                    onSuccess: function(transport) {
+                        let responseText = transport.responseText.replace(/>\s+</g, '><');
+
+                        if (transport.responseText.isJSON()) {
+                            let response = transport.responseText.evalJSON()
+                            console.log(response.message);
                         }
-                    });
-                }
+                    },
+                    onerror: function (transport) {
+                        console.log(transport.responseText.replace(/>\s+</g, '><'));
+                    }
+                });
             }
-        });
+        }
     });
 </script>

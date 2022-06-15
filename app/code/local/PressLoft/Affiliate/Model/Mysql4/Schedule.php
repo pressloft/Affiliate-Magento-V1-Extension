@@ -31,9 +31,10 @@ class PressLoft_Affiliate_Model_Mysql4_Schedule extends Mage_Core_Model_Mysql4_A
 
     /**
      * @param array $ids
+     * @return void
      * @throws Zend_Db_Adapter_Exception
      */
-    public function tryLockItems(array $ids): void
+    public function tryLockItems(array $ids)
     {
         $adapter = $this->_getWriteAdapter();
 

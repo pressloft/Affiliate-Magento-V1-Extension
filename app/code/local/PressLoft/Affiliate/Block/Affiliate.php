@@ -17,6 +17,9 @@ class PressLoft_Affiliate_Block_Affiliate extends Mage_Core_Block_Template
      */
     public function getExpiresCookieUrl()
     {
-        return $this->getUrl('affiliate/ajax/setAffiliateCookie', array('_secure' => $this->_isSecure()));
+        return $this->getUrl(
+            'affiliate/ajax/setAffiliateCookie',
+            array('_secure' => $this->_getApp()->getFrontController()->getRequest()->isSecure())
+        );
     }
 }
