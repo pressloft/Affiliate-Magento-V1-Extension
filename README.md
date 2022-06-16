@@ -8,15 +8,18 @@ This project contains source code for the Magento 1 extension.  Please note that
 3. Copy the extension files to your Magento installation whilst maintaining the file structure of the extension.
 4. If you are using a custom theme, it is recommended to copy the design files to your current theme's folders.
 5. Flush the Magento cache and cache storage.
-6. Ensure the new module (called `PressLoft_Affiliate`) is enabled.
-7. Navigate to `System > Configuration` and click `Affiliate` in the left-hand menu (under the heading `PRESS LOFT`).
-8. On the Affilate page ensure that the module is enabled and input your `Affilate ID`.
-9. Save the configuration.
+6. Navigate to `System > Configuration` and click `Advanced` in the left-hand menu under the heading **ADVANCED**.
+7. On the **Advanced** screen ensure the new module `PressLoft_Affiliate` is enabled.
+8. Navigate to `System > Configuration` and click `Affiliate` in the left-hand menu under the heading **PRESS LOFT**.
+9. On the **Affilate** screen ensure that the module is enabled and input your `Affilate ID`.
+10. Save the configuration.
 
-## Using your own theme
+### Using your own theme
 If you have your own custom theme install then we recommend copying all files in `app/design/frontend/base/default/` to the
 `app/design/frontend/[your_package]/[your_theme]/` folder in your installation.
 
-## Flushing the Magento cache
+### Flushing the Magento cache
 You can flush the cache by clicking the two buttons in the top right of the admin console under `System` > `Cache Maganement`.  Alternatively you can flush the cache from the command line by running the following command.
  > `sudo rm -Rf var/{cache,session}/*`
+
+## Using the extension
