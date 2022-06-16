@@ -22,4 +22,7 @@ If you have your own custom theme install then we recommend copying all files in
 You can flush the cache by clicking the two buttons in the top right of the admin console under `System` > `Cache Maganement`.  Alternatively you can flush the cache from the command line by running the following command.
  > `sudo rm -Rf var/{cache,session}/*`
 
+### Your Affiliate ID
+Your Affiliate ID is the same as your Press Loft client ID and can be located by logging into your account on [Press Loft](https://www.pressloft.com/)
+
 ## Using the extension
