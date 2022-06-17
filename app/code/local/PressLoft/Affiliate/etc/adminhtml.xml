@@ -5,7 +5,7 @@
             <children>
                 <pressloft_affiliate translate="title" module="pressloft_affiliate">
                     <sort_order>550</sort_order>
-                    <title>Affiliate Logs</title>
+                    <title>Press Loft Affiliate Logs</title>
                     <action>adminhtml/affiliateLogs/</action>
                 </pressloft_affiliate>
             </children>
@@ -21,7 +21,7 @@
                     <sales>
                         <children>
                             <pressloft_affiliate translate="title" module="pressloft_affiliate">
-                                <title>Affiliate Logs</title>
+                                <title>Press Loft Affiliate Logs</title>
                             </pressloft_affiliate>
                         </children>
                     </sales>
