@@ -9,7 +9,7 @@ class PressLoft_Affiliate_Block_Adminhtml_AffiliateLogs extends Mage_Adminhtml_B
     {
         $this->_blockGroup = 'pressloft_affiliate';
         $this->_controller = 'adminhtml_affiliateLogs';
-        $this->_headerText = $this->__('Affiliate Logs');
+        $this->_headerText = $this->__('Press Loft Affiliate Logs');
 
         parent::__construct();
         $this->_removeButton('add');
