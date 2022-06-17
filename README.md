@@ -23,6 +23,7 @@ You can flush the cache by clicking the two buttons in the top right of the admi
  > `sudo rm -Rf var/{cache,session}/*`
 
 ### Your Affiliate ID
-Your Affiliate ID is the same as your Press Loft client ID and can be located by logging into your account on [Press Loft](https://www.pressloft.com/)
+Your Affiliate ID is the same as your Press Loft client ID and can be located by logging into your account on [Press Loft](https://www.pressloft.com/).
 
 ## Using the extension
+This extension will track sales referrals from the Press Loft affiliate network.  A list of all tracked sales can be found under `Sales > Press Loft Affiliate Logs`.  To view full details of commission due log into your account on [Press Loft](https://www.pressloft.com/).
